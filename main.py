@@ -33,9 +33,14 @@ def show_article_detail(root, article_id, user=None):
 
 def show_superadmin(root, user=None):
     from superadmin.superadmin_dashboard import SuperadminDashboard
-
     clear_root(root)
     SuperadminDashboard(root, user=user)
+
+
+def show_manage_admins(root, user=None):
+    from superadmin.superadmin_manage_admins import ManageAdmins
+    clear_root(root)
+    ManageAdmins(root, user=user)
 
 
 def show_admin(root, user=None):
@@ -56,6 +61,8 @@ def setup_navigation(root):
     )
 
     root.show_superadmin = lambda user=None: show_superadmin(root, user)
+
+    root.show_manage_admins = lambda user=None: show_manage_admins(root, user)
 
     root.show_admin = lambda user=None: show_admin(root, user)
 

@@ -627,14 +627,17 @@ class SuperadminDashboard:
         self._rebuild()
 
     # ═══════════════════════════════════════════════════════════════
-    #  Navigation stubs
+    #  Navigation
     # ═══════════════════════════════════════════════════════════════
 
     def _go_dashboard(self):
         pass  # already on dashboard
 
     def show_manage_admins(self):
-        messagebox.showinfo("Manage Admins", "Navigating to Manage Admins.")
+        from superadmin.superadmin_manage_admins import ManageAdmins
+        for w in self.root.winfo_children():
+            w.destroy()
+        ManageAdmins(self.root, user=self.user)
 
     def show_manage_users(self):
         messagebox.showinfo("Manage Users", "Navigating to Manage Users.")
