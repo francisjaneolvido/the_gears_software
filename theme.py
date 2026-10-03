@@ -26,14 +26,30 @@ COLORS = {
     "navy": "#0C1633",
     "navy_light": "#1A2A52",
 
-    # Overlays (tkinter does not support alpha in hex; use stipple patterns instead)
+    # Overlays
     "overlay": "#0C1633",
     "overlay_light": "#F8F6F3",
 
     # Semantic
     "success": "#2E7D32",
+    "success_dark": "#1B5E20",
+    "success_bg": "#F1FBF3",
     "error": "#B02029",
+    "error_bg": "#FFF5F7",
     "input_bg": "#F5F3F0",
+
+    "promote_blue": "#1976D2",
+    "promote_blue_dark": "#0D47A1",
+    "demote_brown": "#6D4C41",
+    "demote_brown_dark": "#4E342E",
+    "info_bg": "#FFF8E6",
+    "info_border": "#FFECB3",
+    "info_text": "#8A6D3B",
+
+    "tab_active": "#F19421",
+    "tab_inactive_fg": "#777777",
+    "row_alt": "#FCFCFC"
+    
 }
 
 SPACING = {
@@ -48,6 +64,7 @@ SPACING = {
 FONTS = {
     "brand":      ("Hedvig Letters Serif 24pt", 24, "bold"),
     "hero":       ("Hedvig Letters Serif 24pt", 24, "bold"),
+    "subheading": ("Poppins", 11),
     "heading":    ("Poppins", 20, "bold"),
     "section":    ("Poppins", 16, "bold"),
     "card_title": ("Poppins", 13, "bold"),
@@ -61,6 +78,23 @@ FONTS = {
     "input":      ("Poppins", 11),
     "modal_title":("Poppins", 18, "bold"),
     "link":       ("Poppins", 10, "underline"),
+    "table_body":  ("Poppins", 10),
+    "table_head": ("Poppins", 9, "bold")
+}
+
+DARK_COLORS = {
+    **COLORS,
+    "background": "#141414",
+    "background_alt": "#1A1A1A",
+    "card": "#1F1F1F",
+    "text_dark": "#F0F0F0",
+    "text_mid": "#D0D0D0",
+    "text_grey": "#A0A0A0",
+    "text_light": "#787878",
+    "border": "#2E2219",
+    "input_bg": "#252525",
+    "primary_orange_light": "#3A2210",
+    "row_alt": "#252525"
 }
 
 BUTTON_STYLES = {
@@ -147,3 +181,4 @@ RADIUS = {
     "input": 6,
     "modal": 14,
 }
+
